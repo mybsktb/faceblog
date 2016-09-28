@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
+  <!--(管理员)文章管理-->
+  <servlet>
+    <servlet-name>AdminNewsMg</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminNewsMgCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminNewsMg</servlet-name>
+    <url-pattern>/manager/AdminNewsMg</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)文章单个审核-->
+  <servlet>
+    <servlet-name>AdminNewSeeCheck</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminNewsSeeCheckCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminNewSeeCheck</servlet-name>
+    <url-pattern>/manager/AdminNewsSeeCheck</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)文章审核-->
+  <servlet>
+    <servlet-name>AdminNewsCheck</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminNewsCheckCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminNewsCheck</servlet-name>
+    <url-pattern>/manager/AdminNewsCheck</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)敏感词管理-->
+  <servlet>
+    <servlet-name>AdminSensitiveMg</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminSensitiveMgCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminSensitiveMg</servlet-name>
+    <url-pattern>/manager/AdminSensitiveMg</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)敏感词删除-->
+  <servlet>
+    <servlet-name>AdminSensitiveDele</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminSensitiveDeleCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminSensitiveDele</servlet-name>
+    <url-pattern>/manager/AdminSensitiveDele</url-pattern>
+  </servlet-mapping>
+   <!--(管理员)敏感词增加-->
+  <servlet>
+    <servlet-name>AdminSensitiveAdd</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminSensitiveAddCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminSensitiveAdd</servlet-name>
+    <url-pattern>/manager/AdminSensitiveAdd</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)敏感词修改-->
+  <servlet>
+    <servlet-name>AdminSensitiveUpda</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminSensitiveUpdaCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminSensitiveUpda</servlet-name>
+    <url-pattern>/manager/AdminSensitiveUpda</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)增加用户-->
+  <servlet>
+    <servlet-name>AdminUserAdd</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminUserAddCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUserAdd</servlet-name>
+    <url-pattern>/manager/AdminUserAdd</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)用户管理-->
+  <servlet>
+    <servlet-name>AdminUserMg</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminUserMgCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUserMg</servlet-name>
+    <url-pattern>/manager/AdminUserMg</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)用户删除和重置-->
+  <servlet>
+    <servlet-name>AdminUserDele</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminUserDeleCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUserDele</servlet-name>
+    <url-pattern>/manager/AdminUserDele</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)修改密码-->
+  <servlet>
+    <servlet-name>AdminUserChanPwd</servlet-name>
+    <servlet-class>com.faceblog.controller.AdminUserChanPwd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminUserChanPwd</servlet-name>
+    <url-pattern>/manager/AdminUserChanPwd</url-pattern>
+  </servlet-mapping>
+  <!--(管理员)字符编码过滤器-->
+  <filter>
+    <filter-name>character</filter-name>
+    <filter-class>com.faceblog.filter.CharFilter</filter-class>
+    <init-param>
+      <param-name>char</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>character</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <display-name>faceblog</display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckAnswerServ</servlet-name>
+    <servlet-class>com.faceblog.controller.login_register.CheckAnswerServ</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CheckAnswerServ</servlet-name>
+    <url-pattern>/checkAnswerServ</url-pattern>
+  </servlet-mapping>
+  
+ <!-- 配置进入博客主界面 --> 
+  <servlet>
+    <servlet-name>Recommend</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.Recomm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Recommend</servlet-name>
+    <url-pattern>/blog/Recomm</url-pattern>
+  </servlet-mapping>
+   <!-- 配置点击进入文章鉴赏 --> 
+  <servlet>
+    <servlet-name>ArtAttr</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.ArtAttr</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtAttr</servlet-name>
+    <url-pattern>/blog/ArtAttr</url-pattern>
+  </servlet-mapping>
+ <!-- 配置提交评论 --> 
+  <servlet>
+    <servlet-name>Comment</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.Comment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Comment</servlet-name>
+    <url-pattern>/blog/Comment</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>NewsAddServlet</servlet-name>
+  <servlet-class>com.faceblog.controller.NewsAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NewsAddServlet</servlet-name>
+  <url-pattern>/backstage/manager/NewsAddServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!--文件上传服务配置  -->
+  <servlet>
+	<servlet-name>FileUpLoad</servlet-name>
+	<servlet-class>com.faceblog.controller.login_register.FileUpLoad</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>FileUpLoad</servlet-name>
+	<url-pattern>/test/fileUpLoad</url-pattern>
+</servlet-mapping>
+<!-- 文件上传配置二 -->
+<servlet>
+		<servlet-name>uploadProcessorServlet</servlet-name>
+		<servlet-class>com.faceblog.controller.login_register.UploadProcessorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uploadProcessorServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+
+  
+   <servlet>
+  <servlet-name>NewsMgServlet</servlet-name>
+  <servlet-class>com.faceblog.controller.NewsMgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NewsMgServlet</servlet-name>
+  <url-pattern>/backstage/manager/NewsMgServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>NewsMgDelServlet</servlet-name>
+  <servlet-class>com.faceblog.controller.NewsMgDelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NewsMgDelServlet</servlet-name>
+  <url-pattern>/backstage/manager/NewsMgDelServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>index</servlet-name>
+  	<servlet-class>com.faceblog.controller.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>index</servlet-name>
+  	<url-pattern>/backstage/manager/index</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cateMg</servlet-name>
+  	<servlet-class>com.faceblog.controller.CateMgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cateMg</servlet-name>
+  	<url-pattern>/backstage/manager/cateMg</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>cateDel</servlet-name>
+  	<servlet-class>com.faceblog.controller.CateDelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cateDel</servlet-name>
+  	<url-pattern>/backstage/manager/cateDel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cateAdd</servlet-name>
+  	<servlet-class>com.faceblog.controller.CateAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cateAdd</servlet-name>
+  	<url-pattern>/backstage/manager/cateAdd</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cateUpd</servlet-name>
+  	<servlet-class>com.faceblog.controller.CateUpdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cateUpd</servlet-name>
+  	<url-pattern>/backstage/manager/cateUpd</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>userUpd</servlet-name>
+  	<servlet-class>com.faceblog.controller.UserUpdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>userUpd</servlet-name>
+  	<url-pattern>/backstage/manager/userUpd</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>userMg</servlet-name>
+  	<servlet-class>com.faceblog.controller.UserMgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>userMg</servlet-name>
+  	<url-pattern>/backstage/manager/userMg</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>pwdUpd</servlet-name>
+  	<servlet-class>com.faceblog.controller.PwdUpdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pwdUpd</servlet-name>
+  	<url-pattern>/backstage/manager/pwdUpd</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cmtMg</servlet-name>
+  	<servlet-class>com.faceblog.controller.CmtMgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cmtMg</servlet-name>
+  	<url-pattern>/backstage/manager/cmtMg</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cmtDel</servlet-name>
+  	<servlet-class>com.faceblog.controller.CmtDelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cmtDel</servlet-name>
+  	<url-pattern>/backstage/manager/cmtDel</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>reCmtMg</servlet-name>
+  	<servlet-class>com.faceblog.controller.ReCmtMgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>reCmtMg</servlet-name>
+  	<url-pattern>/backstage/manager/reCmtMg</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>reCmtUpd</servlet-name>
+  	<servlet-class>com.faceblog.controller.ReCmtUpdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>reCmtUpd</servlet-name>
+  	<url-pattern>/backstage/manager/reCmtUpd</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>reCmtAdd</servlet-name>
+  	<servlet-class>com.faceblog.controller.ReCmtAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>reCmtAdd</servlet-name>
+  	<url-pattern>/backstage/manager/reCmtAdd</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>NewsUpdateServlet</servlet-name>
+  <servlet-class>com.faceblog.controller.NewsUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NewsUpdateServlet</servlet-name>
+  <url-pattern>/backstage/manager/NewsUpdateServlet</url-pattern>
+  </servlet-mapping>
+ 
+
+
+  <servlet>
+  <servlet-name>NewsSelCate</servlet-name>
+  <servlet-class>com.faceblog.controller.NewsSelCate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NewsSelCate</servlet-name>
+  <url-pattern>/backstage/manager/NewsSelCate</url-pattern>
+  </servlet-mapping>
+<!-- 孟川开始 -->
+ <filter>
+ 	<filter-name>backstage</filter-name>
+ 	<filter-class>com.faceblog.filter.BackstageFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>backstage</filter-name>
+ 	<url-pattern>/backstage/manager/*</url-pattern>
+ </filter-mapping>
+  
+<!--   <filter>
+    <filter-name>static_html_index</filter-name>
+    <filter-class>com.faceblog.filter.StaticHtmlFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>static_html_index</filter-name>
+    <url-pattern>/blog/Recomm</url-pattern> 
+    <url-pattern>/blog/about.jsp</url-pattern>
+  </filter-mapping>  -->
+  <servlet>
+    <servlet-name>timerHtml</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.TimerHtmlServlet</servlet-class>
+    <!-- <load-on-startup>1</load-on-startup> -->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>timerHtml</servlet-name>
+    <url-pattern>/TimerHtml</url-pattern>
+  </servlet-mapping>
+<!-- 孟川结束 -->
+
+  <!-- 裘丛民开始 -->
+  <servlet-mapping>
+    <servlet-name>HomeBrowseServ</servlet-name>
+    <url-pattern>/blog/homeBrowseServ</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>HomeBrowseServ</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.portal.HomeBrowseServ</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServ</servlet-name>
+    <servlet-class>com.faceblog.controller.login_register.LoginServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServ</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RegisterServ</servlet-name>
+    <servlet-class>com.faceblog.controller.login_register.RegisterServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServ</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ResetPwdServ</servlet-name>
+    <servlet-class>com.faceblog.controller.login_register.ResetPwdServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResetPwdServ</servlet-name>
+    <url-pattern>/resetPwd</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>UserIsExistedServ</servlet-name>
+    <servlet-class>com.faceblog.controller.login_register.UserIsExistedServ</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>UserIsExistedServ</servlet-name>
+    <url-pattern>/userIsExistedServ</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddUser</servlet-name>
+    <servlet-class>com.faceblog.controller.login_register.AddUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddUser</servlet-name>
+    <url-pattern>/addUser</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>CheckAnswer</servlet-name>
+    <servlet-class>com.faceblog.controller.login_register.CheckAnswer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckAnswer</servlet-name>
+    <url-pattern>/checkAnswer</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>PortalLoginServ</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.portal.PortalLoginServ</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>PortalLoginServ</servlet-name>
+    <url-pattern>/blog/portalLoginServ</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AboutLoadServ</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.about.AboutLoadServ</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>AboutLoadServ</servlet-name>
+    <url-pattern>/blog/aboutLoadServ</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BlogHome</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.portal.BlogHome</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>BlogHome</servlet-name>
+    <url-pattern>/blog/blogHome</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>BlogHomeLogin</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.portal.BlogHomeLogin</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>BlogHomeLogin</servlet-name>
+    <url-pattern>/blog/blogHomeLogin</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>BlogHomeLoadOut</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.portal.BlogHomeLoadOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BlogHomeLoadOut</servlet-name>
+    <url-pattern>/blog/blogHomeLoadOut</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RedirectToBack</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.portal.RedirectToBack</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RedirectToBack</servlet-name>
+    <url-pattern>/blog/redirectToBack</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>DoUploadNewsImageServlet</servlet-name>
+  <servlet-class>com.faceblog.controller.DoUploadNewsImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>com.faceblog.controller.blog.portal.Test</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  <servlet-name>DoUploadNewsImageServlet</servlet-name>
+  <url-pattern>/backstage/manager/DoUploadNewsImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>HomeRecommend</servlet-name>
+  	<servlet-class>com.faceblog.controller.blog.portal.HomeRecomServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HomeRecommend</servlet-name>
+  	<url-pattern>/blog/recom</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>addAssessServ</servlet-name>
+  	<servlet-class>com.faceblog.controller.blog.newsList.AddAssessServ</servlet-class>
+ 
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>addAssessServ</servlet-name>
+   <url-pattern>/blog/addAssessServ</url-pattern>
+  
+  </servlet-mapping>
+  <!-- 裘丛民结束 -->
+  
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
